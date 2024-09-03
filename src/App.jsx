@@ -31,21 +31,20 @@ function App() {
         return pokemonRecord;
       })
     );
-    setPokemonData(_pokemonData)
+    setPokemonData(_pokemonData);
   };
 
   console.log(pokemonData);
 
   return (
     <>
-      <h1>こんにちは</h1>
       {loading ? (
-        <h1>ロード中．．．</h1>
+        <h1>ロード中...</h1>
       ) : (
         <>
-          <div className="pokemonCardContainer">
+          <div className='pokemonCardContainer'>
             {pokemonData.map((pokemon, i) => {
-              return <Card key={i} pokemon={pokemon}/>;
+              return <Card key={i} pokemon={pokemon} />;
             })}
           </div>
         </>
