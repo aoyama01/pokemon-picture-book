@@ -8,6 +8,7 @@ export const getAllPokemon = (url) => {
   });
 };
 
+// ポケモン20匹分のデータを含むjsonを取得
 export const getPokemon = (url) => {
   return new Promise((resolve, reject) => {
     fetch(url)

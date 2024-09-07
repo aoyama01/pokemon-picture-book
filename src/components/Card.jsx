@@ -1,6 +1,7 @@
 import React from 'react';
 import './Card.css';
 
+// 1種類のポケモンの詳細なデータを表示
 const Card = ({ pokemon }) => {
   return (
     <div className='card'>
@@ -12,7 +13,8 @@ const Card = ({ pokemon }) => {
         <div>タイプ</div>
         {pokemon.types.map((type) => {
           return (
-            <div>
+            <div key={type.type.name}>
+              {/* ポケモンのタイプ名称に同じものがあればWarning出ちゃうかも */}
               <span className='typeName'>{type.type.name}</span>
             </div>
           );
